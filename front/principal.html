@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClientKey | Principal</title>
+    <link rel="stylesheet" href="principal.css">
+    <script src="principal.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="topo">
+            <img src="img/clientkeylogo.png" alt="Logomarca do ClientKey" class="clientkeylogo">
+        </div>
+        <div class="segundaparte">
+            <div class="lateral">
+                <div class="interiorlateral">
+                    <div class="cimalateral">
+                        <div class="blococima">
+                        <img src="img/whiteiconuser.png" alt="Imagem de usuário" class="uservazio">
+                        <p id="usuarioatual"></p>
+                        <p id="negocioatual"></p>
+                        </div>
+                    </div>
+                    <div class="baixolateral">
+                    </div>
+                </div>
+            </div>
+            <div class="principal">
+                <div class="cima">
+                    <button id="abrir_form" class="botaonovocl">Criar novo cliente</button> 
+                    <div id="id01" class="modal">
+
+                        <form id="myForm" class="modal-content animate"> 
+                            <div class="container">
+                                <label for="nome"><b>Nome*</b></label> 
+                                <input type="text" id="nome" placeholder="Digite o Nome" name="nome" required>
+
+                                <label for="cpf"><b>CPF</b></label> 
+                                <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="14" name="cpf">
+
+                                <label for="email"><b>Email</b></label> 
+                                <input type="email" id="email" placeholder="Digite o Email" name="email">
+
+                                <label for="telefone"><b>Telefone*</b></label> 
+                                <input type="text" id="telefone" placeholder="xx xxxxxxxx" name="telefone" required>
+
+                                <label for="endereco"><b>Endereço</b></label> 
+                                <input type="text" id="endereco" placeholder="Digite o Endereço" name="endereco">
+                    
+                                <label for="status"><b>Status</b></label> 
+                                <input type="text" id="status" placeholder="Ativo ou não?" name="status">
+
+                                <div class="clearfix"> 
+                                    <button type="button" id="close" class="cancelbtn">Cancelar</button> 
+                                    <button type="button" class="signupbtn" onclick="handleSubmit(event)" id="botao_criar_editar">Criar</button>
+                                </div> 
+                            </div> 
+                        </form> 
+
+
+                    </div> 
+
+                    <div class="pesquisa">
+                        <input type="text" id="barrapesquisa" placeholder="Buscar..">
+                        <!-- <img src="img/lupa.png" height="20vh" alt="lupa" id="lupa"> -->
+                    </div>
+                </div>
+                <div class="baixo">
+                    <div id="interiorbaixo" class="interiorbaixo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

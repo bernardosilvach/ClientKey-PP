@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+main {
+    display: flex;
+}
+
+.esquerda {
+    background-color: #5C78DB;
+    height: 100vh;
+    width: 45vw;
+}
+
+.direita {
+    /* background-color: green; */
+    height: 100vh;
+    width: 55vw;
+}
+
+.topo {
+    height: 20vh;
+    width: 45vw;
+    background-color: #5C78DB;
+}
+
+.clientkeylogo {
+    height: 21vh;
+    width: 13vw;
+}
+
+.login {
+    /* background-color: orange; */
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 15vh; */
+    margin-top: 10vh;
+    box-sizing: border-box;
+    padding-left: 12%;
+}
+
+.logininput{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* width: 25vw; */
+    margin-top: 2vh;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.textologin{
+    margin-bottom: 1vh;
+    font-family: 'Josefin Sans';
+    font-size: 9vh;
+    color: white;
+}
+
+.botaologin{
+    height: 3vh;
+    width: 60%;
+    margin-top: 1vh;
+    font-family: 'Josefin Sans';
+    border-radius: 10px;
+    border: none;
+    background-color: #424cad;
+    color: white;
+}
+
+.botaocadastrar {
+    height: 3vh;
+    width: 30%;
+    margin-top: 1vh;
+    font-family: 'Josefin Sans';
+    border-radius: 10px;
+    border: none;
+    background-color: #424cad;
+    color: white;
+}
+
+.esquecesenha {
+    margin-left: 30%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Josefin Sans';
+    font-size: 1.5vh;
+    color: white;
+    width: 30%;
+}
+
+.esquecesenha {
+    border-bottom: 1px solid transparent;
+  }
+  
+  /* .esquecesenha:hover {
+    border-bottom-color: #0b135e;
+  } */
+
+.backgrounddireita {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65%; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+input {
+    border-radius: 20px;
+    height: 4vh;
+    width: 89%;
+    border: none;
+    font-family: 'Josefin Sans';
+    padding-left: 10px;
+}
+
+::placeholder {
+    margin-left: 1vh;
+    font-size: 0.6rem;
+    padding-left: 1.5vh;
+}
+
+.botoes {
+    margin-top: 1vh;
+}
