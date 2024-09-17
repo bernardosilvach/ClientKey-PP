@@ -21,7 +21,7 @@ body {
     margin-top: 13vh;
     border-radius: 9px;
     border: none;
-    background-color: #D9D9D9;
+    background-color: #CFD8DC;
     transition: background-color 0.3s, color 0.3s;
     font-size: 12px;
 }
@@ -41,24 +41,44 @@ input[type=password] {
     box-sizing: border-box; 
 }  
 
-.cancelbtn { 
-    padding: 14px 20px; 
-    background-color: #FF2E00; 
-} 
+input:focus {
+    border-color: #4169E1;
+    box-shadow: 0 0 8px rgba(65, 105, 225, 0.3);
+    outline: none;
+}
 
-.cancelbtn, 
-.signupbtn { 
-    float: left; 
-    width: 50% 
-} 
+.cancelbtn {
+    background-color: #FF6347;
+    color: white;
+}
+
+.cancelbtn:hover {
+    background-color: #E5533B;
+}
+
+.cancelbtn, .signupbtn {
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%; /* Ajusta a largura para não ficar muito larga */
+    border-radius: 10px;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centraliza o texto */
+}
 
 .signupbtn {
-    padding: 14px 20px;
-    background-color: #5C78DB;
+    background-color: #4169E1;
+    color: white;
+}
+
+.signupbtn:hover {
+    background-color: #3558C9;
 }
 
 .container { 
-    padding: 16px; 
+    padding: 20px;
+    /* border-radius: 10px;  */
 }
 
 .modal { 
@@ -75,12 +95,34 @@ input[type=password] {
     padding-top: 60px; 
 } 
 
-.modal-content { 
-    background-color: #fefefe; 
-    margin: 5% auto 15% auto; 
-    border: 1px solid #888; 
-    width: 80%; 
-} 
+.modal-header, .modal-footer {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000000;
+}
+
+input:required {
+    border-left: 3px solid #FF6347;
+}
+
+.modal-content {
+    background-color: #f9f9f9;
+    margin: 5% auto;
+    padding: 20px;
+    border: none;
+    border-radius: 15px; /* Arredonda as bordas */
+    width: 60%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    transition: all 0.3s ease; /* Transição suave */
+}
 
 .close { 
     position: absolute; 
@@ -97,24 +139,35 @@ input[type=password] {
     cursor: pointer; 
 } 
 
+.clearfix {
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Adiciona espaço entre os botões */
+    margin-top: 15px;
+}
+
 .clearfix::after { 
     content: ""; 
     clear: both; 
     display: table; 
 } 
 
-@media screen and (max-width: 600px) { 
-    .cancelbtn, 
-    .signupbtn { 
-        width: 100%; 
-    } 
-} 
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 80%;
+    }
+
+    .cancelbtn, .signupbtn {
+        width: 100%;
+    }
+}
 
 .topo {
     align-items: center;
     justify-content: center;
     display: flex;
-    background-color: #5C78DB;
+    /* background-color: #5C78DB; */
+    background-color: #4169E1;
     height: 10vh;
     width: 100vw;
 }
@@ -131,7 +184,7 @@ input[type=password] {
 }
 
 .interiorlateral {
-    background-color: #D9D9D9;
+    background-color: #CFD8DC;
     width: 20vw;
     height: 83vh;
     margin-left: 2.5vw;
@@ -167,7 +220,7 @@ input[type=password] {
     border: 1px solid #ccc;
     border-radius: 20px;
     outline: none;
-    background-color: #D9D9D9;
+    background-color: #CFD8DC;
     width: 20vw;
     font-size: 12px;
 }
@@ -227,7 +280,7 @@ input[type=password] {
 .interiorbaixo {
     min-height: 65.3vh;
     width: 72.3vw;
-    background-color: #D9D9D9;
+    background-color: #CFD8DC;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -274,7 +327,7 @@ input[type=password] {
 
 .botao_excluir {
     border: none;
-    background-color: #D9D9D9;
+    background-color: #CFD8DC;
     transition: background-color 0.3s, color 0.3s;
     font-size: 12px;
     border-radius: 5px;
@@ -287,14 +340,14 @@ input[type=password] {
 
 .botao_editar {
     border: none;
-    background-color: #D9D9D9;
+    background-color: #CFD8DC;
     transition: background-color 0.3s, color 0.3s;
     font-size: 12px;
     border-radius: 5px;
 }
 
 .botao_editar:hover {
-    background-color: #5C78DB;
+    background-color: #4169E1;
     color: #ffffff;
 }
 
