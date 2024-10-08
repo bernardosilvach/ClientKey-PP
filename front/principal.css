@@ -271,10 +271,11 @@ input:required {
 }
 
 .uservazio {
-    height: 9vh;
-    width: 4vw;
-    justify-content: center;
-    margin-bottom: 3vh;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .interiorbaixo {

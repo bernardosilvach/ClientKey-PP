@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.clientkeylogo {
+    height: 18vh;
+    width: 10vw;
+    padding-top: 1vh;
+}
+
+.topo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* background-color: #5C78DB; */
+    background-color: #4169E1;
+    height: 10vh;
+    width: 100vw;
+}
+
+.principal{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    width: 100vw;
+}
+
+.esquerda{
+    width: 10vw;
+    background-color: #CFD8DC;
+}
+
+.direita{
+    width: 90vw;
+    /* background-color: pink; */
+}
+
+/* Estilo da seção direita com conteúdo centralizado */
+.conteudo-direita {
+    margin-top: 13vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Estilos para a seção da foto de perfil */
+.foto-editar {
+    margin-top: 10vh;
+    flex-basis: 30%;
+    padding-right: 20px;
+    margin-left: 2vw;
+}
+
+.foto-perfil {
+    text-align: center;
+}
+
+.foto-perfil img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.foto-perfil button {
+    background-color: #4169E1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70%;
+}
+
+.foto-perfil button:hover {
+    background-color: #3151b7;
+}
+
+/* Estilos para o formulário de perfil */
+.formulario-perfil {
+    flex-basis: 65%;
+    /* background-color: #f4f4f4; */
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.formulario-perfil h2 {
+    text-align: center;
+}
+
+.formulario-perfil label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.formulario-perfil input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#botao_atualizar {
+    background-color: #4169E1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 92.2%;
+}
+
+#botao_atualizar:hover {
+    background-color: #3151b7;
+}
