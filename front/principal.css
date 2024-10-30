@@ -214,8 +214,18 @@ input:required {
     width: 75vw;
 }
 
-#barrapesquisa {
+.botao-engrenagem{
+    font-size: 10px;
+}
+
+.pesquisa{
     margin-top: 13vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#barrapesquisa {
+    /* margin-top: 13vh; */
     padding: 6px;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -354,4 +364,81 @@ input:required {
 
 .cliente_card {
     margin-left: 10px;
+}
+
+#calendario {
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers the calendar horizontally */
+    color: #ffffff;
+    /* background-color: #333; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+    margin: 0 auto; /* Centers the calendar container */
+    max-width: 250px; /* Sets a maximum width for better centering */
+}
+
+#calendario h2 {
+    margin: 0;
+    font-size: 1.2em; /* Reduced font size for the title */
+    color: #ffffff;
+    padding-bottom: 12px;
+    text-transform: capitalize; /* Capitalizes the month name */
+}
+
+#calendario .dias-semana,
+#calendario .dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#calendario .dias-semana div {
+    font-weight: bold;
+    color: #b0bec5;
+}
+
+#calendario .dia {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+#calendario .dia:hover {
+    background-color: #5C78DB;
+}
+
+#calendario .hoje {
+    background-color: #5C78DB;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(92, 120, 219, 0.5);
+}
+
+#calendario .dias div:empty {
+    visibility: hidden;
+}
+
+@media (max-width: 600px) {
+    #calendario {
+        width: 90%;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    #calendario h2 {
+        font-size: 1em; /* Further reduced font size for smaller screens */
+    }
+
+    #calendario .dias-semana div,
+    #calendario .dia {
+        padding: 8px;
+    }
 }

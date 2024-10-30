@@ -240,3 +240,7 @@ async function handleSubmit(event) {
         }
     }
 }
+
+document.getElementById('botaoEngrenagem').addEventListener('click', function() {
+    window.location.href = 'perfil.html';
+});

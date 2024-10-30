@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="principal.css">
     <script src="principal.js" defer></script>
     <script src="buscar.js" defer></script>
+    <script src="calendario.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -27,6 +28,7 @@
                         </div>
                     </div>
                     <div class="baixolateral">
+                        <div id="calendario"></div>
                     </div>
                 </div>
             </div>
@@ -62,13 +64,16 @@
                             </div> 
                         </form> 
 
-
                     </div> 
-
+                    
                     <div class="pesquisa">
+                        <button id="botaoEngrenagem" class="botao-engrenagem" title="Perfil">
+                            editar perfil
+                        </button>
+
                         <input type="text" id="barrapesquisa" placeholder="Buscar..">
-                        <!-- <img src="img/lupa.png" height="20vh" alt="lupa" id="lupa"> -->
                     </div>
+                    
                 </div>
                 <div class="baixo">
                     <div id="interiorbaixo" class="interiorbaixo">
