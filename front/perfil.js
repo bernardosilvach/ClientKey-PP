@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const cpf = document.getElementById('cpf').value;
         const nomeNegocio = document.getElementById('nomenegocio').value;
-
         const idUser = localStorage.getItem('id_user'); // Obtém o ID do usuário logado
 
         // Verifica se os campos obrigatórios foram preenchidos
@@ -75,6 +74,39 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Erro de conexão com o servidor.');
         }
     }
+
+    // async function uploadFoto(event) {
+    //     const file = event.target.files[0];
+    //     if (!file) return;
+
+    //     const idUser = localStorage.getItem('id_user');
+    //     const formData = new FormData();
+    //     formData.append('foto', file);
+
+    //     try {
+    //         const response = await fetch(`http://localhost:3000/api/store/users/${idUser}/foto`, {
+    //             method: 'PUT',
+    //             body: formData
+    //         });
+            
+    //         const result = await response.json();
+    //         if (result.success) {
+    //             alert('Foto de perfil atualizada com sucesso!');
+    //             document.getElementById('imagemPerfil').src = URL.createObjectURL(file);
+    //         } else {
+    //             alert('Erro ao atualizar a foto de perfil.');
+    //         }
+    //     } catch (error) {
+    //         console.error('Erro ao conectar com o servidor:', error);
+    //         alert('Erro de conexão com o servidor.');
+    //     }
+    // }
+
+    // document.getElementById('botaoEditarFoto').addEventListener('click', () => {
+    //     document.getElementById('inputFoto').click();
+    // });
+
+    // document.getElementById('inputFoto').addEventListener('change', uploadFoto);
 
     // Adiciona o evento de submissão ao formulário de perfil
     const form = document.getElementById('formPerfil');

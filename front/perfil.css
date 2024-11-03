@@ -33,12 +33,12 @@ body {
 }
 
 .esquerda{
-    width: 10vw;
-    background-color: #CFD8DC;
+    width: 5vw;
+    /* background-color: #CFD8DC; */
 }
 
 .direita{
-    width: 90vw;
+    width: 95vw;
     /* background-color: pink; */
 }
 
@@ -65,10 +65,10 @@ body {
 
 .foto-perfil img {
     border-radius: 50%;
-    width: 150px;
+    /* width: 150px; */
     height: 150px;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .foto-perfil button {
@@ -124,4 +124,14 @@ body {
 
 #botao_atualizar:hover {
     background-color: #3151b7;
+}
+
+.esquerda a {
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+    text-align: center;
+    padding-top: 3vh;
+    color: inherit;
+    font-size: 25px;
 }

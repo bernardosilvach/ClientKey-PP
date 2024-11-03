@@ -215,7 +215,19 @@ input:required {
 }
 
 .botao-engrenagem{
-    font-size: 10px;
+    /* height: 5vh; */
+    width: 100%;
+    /* margin-top: 13vh; */
+    border-radius: 5px;
+    border: none;
+    background-color: #CFD8DC;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 12px;
+}
+
+.botao-engrenagem:hover{
+    background-color: #5C78DB;
+    color: #ffffff;
 }
 
 .pesquisa{
@@ -372,21 +384,21 @@ input:required {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centers the calendar horizontally */
+    justify-content: center; 
     color: #ffffff;
     /* background-color: #333; */
     border-radius: 10px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
-    margin: 0 auto; /* Centers the calendar container */
-    max-width: 250px; /* Sets a maximum width for better centering */
+    margin: 0 auto; 
+    max-width: 250px; 
 }
 
 #calendario h2 {
     margin: 0;
-    font-size: 1.2em; /* Reduced font size for the title */
+    font-size: 1.2em; 
     color: #ffffff;
     padding-bottom: 12px;
-    text-transform: capitalize; /* Capitalizes the month name */
+    text-transform: capitalize; 
 }
 
 #calendario .dias-semana,
@@ -434,7 +446,7 @@ input:required {
     }
 
     #calendario h2 {
-        font-size: 1em; /* Further reduced font size for smaller screens */
+        font-size: 1em;
     }
 
     #calendario .dias-semana div,
