@@ -137,7 +137,6 @@ async function uploadUserPhoto(req, res) {
 async function getUserPhoto(req, res) {
     const idUsuario = req.params.id;
 
-    // Consulta para obter o caminho da foto do usuário
     const query = "SELECT foto FROM users WHERE id = ?";
     connection.query(query, [idUsuario], (err, results) => {
         if (err) {
@@ -150,7 +149,10 @@ async function getUserPhoto(req, res) {
         }
 
         const caminhoFoto = results[0].foto;
-        res.status(200).json({ success: true, imagePath: caminhoFoto });
+        // Construa a URL completa para a imagem
+        const urlCompleta = caminhoFoto ? `http://localhost:3000${caminhoFoto}` : null;
+        
+        res.status(200).json({ success: true, imagePath: urlCompleta });
     });
 }
 

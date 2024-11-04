@@ -22,6 +22,7 @@ document.getElementById('inputFoto').addEventListener('change', async function (
         if (resultado.success && resultado.imagePath) {
             document.getElementById('imagemPerfil').src = resultado.imagePath;
             alert('Foto de perfil atualizada com sucesso!');
+            location.reload(); 
         } else {
             alert('Erro ao atualizar a foto de perfil.');
         }
@@ -47,6 +48,7 @@ async function carregarFotoUsuario() {
     } catch (erro) {
         console.error('Erro ao carregar a foto do usuário:', erro);
     }
+
 }
 
 // Chama a função ao carregar a página
