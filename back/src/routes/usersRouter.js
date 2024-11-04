@@ -2,7 +2,7 @@ const {Router} = require('express');
 
 const router = Router();
 
-const {storeUsers, Login, updateUser} = require('../controller/usersController');
+const {storeUsers, Login, updateUser, uploadUserPhoto, getUserPhoto} = require('../controller/usersController');
 
 /**
 * @swagger
@@ -59,5 +59,9 @@ router.post('/store/login', Login);
 */
 
 router.put('/store/users/:id', updateUser);
+
+router.post('/store/users/:id/foto', uploadUserPhoto);
+
+router.get('/store/users/:id/foto', getUserPhoto); // Nova rota para obter a foto do usuário
 
 module.exports = router;
