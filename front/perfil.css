@@ -60,13 +60,16 @@ body {
 }
 
 .foto-perfil {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .foto-perfil img {
-    border-radius: 50%;
-    /* width: 150px; */
-    height: 150px;
+    border-radius: 40%;
+    width: 150px;
+    height: auto;
     object-fit: cover;
     margin-bottom: 30px;
 }
@@ -78,7 +81,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 70%;
+    width: 50%;
 }
 
 .foto-perfil button:hover {
