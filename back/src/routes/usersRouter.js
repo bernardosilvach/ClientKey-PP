@@ -60,7 +60,39 @@ router.post('/store/login', Login);
 
 router.put('/store/users/:id', updateUser);
 
+/**
+* @swagger
+*  /store/users/:id/foto:
+*   post:
+*     summary: Upload da foto do usuário
+*     responses:
+*       200:
+*         description: Faz o upload da foto do usuário no database
+*         content:
+*           application/json:
+*             schema:
+*               type: array
+*               items:
+*                 type: object
+*/
+
 router.post('/store/users/:id/foto', uploadUserPhoto);
+
+/**
+* @swagger
+*  /store/users/:id/foto:
+*   get:
+*     summary: Busca a foto do usuário
+*     responses:
+*       200:
+*         description: Faz um get na foto do usuário no database
+*         content:
+*           application/json:
+*             schema:
+*               type: array
+*               items:
+*                 type: object
+*/
 
 router.get('/store/users/:id/foto', getUserPhoto); // Nova rota para obter a foto do usuário
 

@@ -81,9 +81,8 @@ const fs = require('fs');
 const path = require('path');
 
 async function uploadUserPhoto(req, res) {
-    const idUsuario = req.params.id;
+    const idUsuario = req.params.id; // Obtém o ID do usuário a partir dos parâmetros da requisição.
 
-    // Log para verificar se o arquivo foi enviado
     console.log('Arquivos recebidos:', req.files);
 
     if (!req.files || Object.keys(req.files).length === 0) {
@@ -91,29 +90,34 @@ async function uploadUserPhoto(req, res) {
         return res.status(400).json({ success: false, message: 'Nenhuma imagem enviada.' });
     }
 
+    // Obtém o primeiro arquivo enviado na requisição.
     const arquivoImagem = req.files[Object.keys(req.files)[0]];
+
+    // Define o diretório onde as imagens de perfil serão armazenadas.
     const diretorioUpload = path.join(__dirname, '../uploads/profile_images');
 
-    // Cria o diretório se ele não existir
+    // Cria o diretório, se ele ainda não existir.
     if (!fs.existsSync(diretorioUpload)) {
         fs.mkdirSync(diretorioUpload, { recursive: true });
     }
 
+    // Gera um nome único para a imagem, usando o ID do usuário e a data/hora atual.
     const nomeImagem = `user_${idUsuario}_${Date.now()}${path.extname(arquivoImagem.name)}`;
-    const caminhoImagem = `/uploads/profile_images/${nomeImagem}`;
-    const caminhoCompletoImagem = path.join(diretorioUpload, nomeImagem);
+    const caminhoImagem = `/uploads/profile_images/${nomeImagem}`; // Caminho relativo usado no sistema.
+    const caminhoCompletoImagem = path.join(diretorioUpload, nomeImagem); // Caminho completo no servidor.
 
-    // Salva a imagem no servidor
+    // Salva o arquivo de imagem no diretório designado.
     fs.writeFile(caminhoCompletoImagem, arquivoImagem.data, async (erro) => {
         if (erro) {
             console.error('Erro ao salvar a imagem:', erro);
             return res.status(500).json({ success: false, message: 'Erro ao salvar a imagem no servidor.', error: erro });
         }
 
-        // Após salvar a imagem, tenta atualizar o caminho da imagem no banco de dados
+        // Se a imagem for salva com sucesso, atualiza o caminho da imagem no banco de dados.
         const query = "UPDATE users SET foto = ? WHERE id = ?";
         const params = [caminhoImagem, idUsuario];
 
+        // Executa a consulta no banco de dados para atualizar o registro do usuário.
         connection.query(query, params, (err, results) => {
             if (err) {
                 console.error('Erro ao atualizar o banco de dados:', err);
@@ -125,6 +129,7 @@ async function uploadUserPhoto(req, res) {
                 return res.status(404).json({ success: false, message: 'Usuário não encontrado.' });
             }
 
+            // Retorna uma resposta de sucesso com o caminho da imagem.
             res.status(200).json({
                 success: true,
                 message: 'Imagem enviada e atualizada com sucesso!',
